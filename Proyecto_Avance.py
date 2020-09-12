@@ -9,7 +9,7 @@ act=int(input("¿Que tan activo eres durante el día?, 1:Muy Poco, 2:Poco, 3:Med
 if (act <= 2):
     paquete=("Pasivo")
 elif (act>5):
-    print("Dato no existente")
+    print("Dato no existente") 
 elif (act==3):
     paquete=("Moderado")
 elif (act==4):
