@@ -1,5 +1,6 @@
 #CALORIESAVER
 import math
+
 altura=float(input("Indica tu altura en metros"))
 peso=float(input("Indica tu peso en kilogramos"))
 edad=int(input("Indica tu edad"))
@@ -9,7 +10,7 @@ act=int(input("¿Que tan activo eres durante el día?, 1:Muy Poco, 2:Poco, 3:Med
 if (act <= 2):
     paquete=("Pasivo")
 elif (act>5):
-    print("Dato no existente") 
+    print("Dato no existente")
 elif (act==3):
     paquete=("Moderado")
 elif (act==4):
@@ -24,41 +25,71 @@ print ("Eres", paquete, "Deseas subir, bajar, o mantener peso?")
 
 goal=str(input("usar minusculas porfavor"))
 
+
+def calorias(a,b):
+    return (a*b)
+
 if (goal==("subir")):
     print ("Calorias necesarias para subir")
     IMC=(peso/(altura**2))
     print ("Tu IMC es:", IMC)
     if (edad>17):
         if (paquete=="Muy Activo"):
-            Calorias=(peso*40)+700
-            print (Calorias)
+            print (calorias(peso,45)+700)
+           
         elif (paquete=="Activo"):
-            Calorias=(peso*40)+500
-            print (Calorias)
+            print (calorias(peso,45)+500)
+            
         elif (paquete=="Moderado"):
-            Calorias=(peso*40)+250
-            print (Calorias)
+            print(calorias(peso,45)+250)
+            
         elif (paquete=="Pasivo"):
-            Calorias=(peso*40)+100
-            print(Calorias)
+            print(calorias(peso,45)+100)
+            
     elif (edad<18):
             if (paquete=="Muy Activo"):
-                Calorias=(peso*40)+450
-                print(Calorias)
+                print(calorias(peso,40)+450)
             elif (paquete=="Activo"):
-                Calorias=(peso*40)+300
-                print (Calorias)
+                print(calorias(peso,40)+300)
+                
             elif (paquete=="Moderado"):
-                Calorias=(peso*40)+100
-                print (Calorias)
+                print(calorias(peso,40)+100)
+               
             elif (paquete=="Pasivo"):
-                Calorias=(peso*40)+50
-                print(Calorias)
+                print(calorias(peso,40)+75)
+                
      
 elif (goal==("mantener")):
     print ("Calorias necesarias para mantener")
     IMC=math.sqrt(peso/(altura**2))
     print (IMC)
+    if (edad>17):
+        if (paquete=="Muy Activo"):
+            print (calorias(peso,40))
+           
+        elif (paquete=="Activo"):
+            print (calorias(peso,35))
+            
+        elif (paquete=="Moderado"):
+            print(calorias(peso,35))
+            
+        elif (paquete=="Pasivo"):
+            print(calorias(peso,33))
+            
+    elif (edad<18):
+            if (paquete=="Muy Activo"):
+                print(calorias(peso,40))
+            elif (paquete=="Activo"):
+                print(calorias(peso,40))
+                
+            elif (paquete=="Moderado"):
+                print(calorias(peso,35))
+               
+            elif (paquete=="Pasivo"):
+                print(calorias(peso,30))
+    
+    
+    
 elif (goal==("bajar")):
     print("Calorias necesarias para bajar")
     IMC=math.sqrt(peso/(altura**2))
@@ -70,6 +101,3 @@ else:
 
 
     
-#Falta mostrar si tu imc esta en el rango correcto, tu peso, etc.
-#Despues te va a imprimir 3 opciones a tu agrado si deseas bajar subir o mantener peso
-#y depende de la que selecciones te va a indicar las calorias 
