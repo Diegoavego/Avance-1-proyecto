@@ -5,21 +5,31 @@ altura=float(input("Indica tu altura en metros"))
 peso=float(input("Indica tu peso en kilogramos"))
 edad=int(input("Indica tu edad"))
 
-act=int(input("¿Que tan activo eres durante el día?, 1:Muy Poco, 2:Poco, 3:Medianamente activo, 4:Activo, 5:Muy Activo"))
-
-if (act <= 2):
-    paquete=("Pasivo")
-elif (act>5):
-    print("Dato no existente")
-elif (act==3):
-    paquete=("Moderado")
-elif (act==4):
-    paquete=("Activo")
-elif (act==5):
-    paquete=("Muy Activo")
-else:
-    print("Dato no existente")
-
+while True:
+    act=int(input("""¿Que tan activo eres durante el día?
+    1:Muy Poco
+    2:Poco
+    3:Medianamente activo
+    4:Activo
+    5:Muy Activo"""))
+    
+    if act==1:
+        paquete=("Pasivo")
+        break
+    elif act==2:
+        paquete=("Pasivo")
+        break
+    elif act==3:
+        paquete=("Moderado")
+        break
+    elif act==4:
+        paquete=("Activo")
+        break
+    elif act==5:
+        paquete=("Muy Activo")
+        break
+    else:
+        print ("Debes seleccionar una opcion (1, 2, 3, 4 o 5)")
 
 print ("Eres", paquete, "Deseas subir, bajar, o mantener peso?")
 
