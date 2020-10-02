@@ -1,9 +1,10 @@
 #CALORIESAVER
 import math
 
-altura=float(input("Indica tu altura en metros"))
-peso=float(input("Indica tu peso en kilogramos"))
-edad=int(input("Indica tu edad"))
+#Lista para los datos que introduce el usuario
+Datos=[float(input("Indica tu peso:")),
+       (float(input("Indica tu altura en metros:"))),
+       (int(input("Indica tu edad:")))]
 
 while True:
     act=int(input("""¿Que tan activo eres durante el día?
@@ -32,8 +33,8 @@ while True:
         print ("Debes seleccionar una opcion (1, 2, 3, 4 o 5)")
 
 print ("Eres", paquete, "Deseas subir, bajar, o mantener peso?")
-
 goal=str(input("usar minusculas porfavor"))
+    
 
 
 def calorias(a,b):
@@ -41,69 +42,96 @@ def calorias(a,b):
 
 if (goal==("subir")):
     print ("Calorias necesarias para subir")
-    IMC=(peso/(altura**2))
-    print ("Tu IMC es:", IMC)
-    if (edad>17):
+    IMC=(Datos[0]/(Datos[1]**2))
+    print ("Tu IMC es:",IMC,"%")
+    if (Datos[2]>17):
         if (paquete=="Muy Activo"):
-            print (calorias(peso,45)+700)
+            print (calorias(Datos[0],45)+1700)
            
         elif (paquete=="Activo"):
-            print (calorias(peso,45)+500)
+            print (calorias(Datos[0],45)+1200)
             
         elif (paquete=="Moderado"):
-            print(calorias(peso,45)+250)
+            print(calorias(Datos[0],45)+900)
             
         elif (paquete=="Pasivo"):
-            print(calorias(peso,45)+100)
+            print(calorias(Datos[0],45)+500)
             
-    elif (edad<18):
+    elif (Datos[2]<18):
             if (paquete=="Muy Activo"):
-                print(calorias(peso,40)+450)
+                print(calorias(Datos[0],40)+1100)
             elif (paquete=="Activo"):
-                print(calorias(peso,40)+300)
+                print(calorias(Datos[0],40)+900)
                 
             elif (paquete=="Moderado"):
-                print(calorias(peso,40)+100)
+                print(calorias(Datos[0],40)+700)
                
             elif (paquete=="Pasivo"):
-                print(calorias(peso,40)+75)
+                print(calorias(Datos[0],40)+500)
                 
      
 elif (goal==("mantener")):
     print ("Calorias necesarias para mantener")
-    IMC=math.sqrt(peso/(altura**2))
-    print (IMC)
-    if (edad>17):
+    IMC=(Datos[0]/(Datos[1]**2))
+    print ("Tu IMC es:", IMC,"%")
+    if (Datos[2]>17):
         if (paquete=="Muy Activo"):
-            print (calorias(peso,40))
+            print (calorias(Datos[0],40))
            
         elif (paquete=="Activo"):
-            print (calorias(peso,35))
+            print (calorias(Datos[0],35))
             
         elif (paquete=="Moderado"):
-            print(calorias(peso,35))
+            print(calorias(Datos[0],35))
             
         elif (paquete=="Pasivo"):
-            print(calorias(peso,33))
+            print(calorias(Datos[0],33))
             
-    elif (edad<18):
+    elif (Datos[2]<18):
             if (paquete=="Muy Activo"):
-                print(calorias(peso,40))
+                print(calorias(Datos[0],40))
             elif (paquete=="Activo"):
-                print(calorias(peso,40))
+                print(calorias(Datos[0],40))
                 
             elif (paquete=="Moderado"):
-                print(calorias(peso,35))
+                print(calorias(Datos[0],35))
                
             elif (paquete=="Pasivo"):
-                print(calorias(peso,30))
+                print(calorias(Datos[0],30))
     
     
     
 elif (goal==("bajar")):
     print("Calorias necesarias para bajar")
-    IMC=math.sqrt(peso/(altura**2))
-    print ("Tu IMC es:",IMC)
+    IMC=(Datos[0]/(Datos[1]**2))
+    print ("Tu IMC es:",IMC,"%")
+    
+     if (Datos[2]>17):
+        if (paquete=="Muy Activo"):
+            print (calorias(Datos[0],45)-1700)
+           
+        elif (paquete=="Activo"):
+            print (calorias(Datos[0],45)-1200)
+            
+        elif (paquete=="Moderado"):
+            print(calorias(Datos[0],45)+900)
+            
+        elif (paquete=="Pasivo"):
+            print(calorias(Datos[0],45)+500)
+            
+    elif (Datos[2]<18):
+            if (paquete=="Muy Activo"):
+                print(calorias(Datos[0],40)+1100)
+            elif (paquete=="Activo"):
+                print(calorias(Datos[0],40)+900)
+                
+            elif (paquete=="Moderado"):
+                print(calorias(Datos[0],40)+700)
+               
+            elif (paquete=="Pasivo"):
+                print(calorias(Datos[0],40)+500)
+                
+    
 else:
     print ("Dato no valido")
 
