@@ -44,6 +44,7 @@ if (goal==("subir")):
     print ("Calorias necesarias para subir")
     IMC=(Datos[0]/(Datos[1]**2))
     print ("Tu IMC es:",IMC,"%")
+    
     if (Datos[2]>17):
         if (paquete=="Muy Activo"):
             print (calorias(Datos[0],45)+1700)
@@ -105,8 +106,7 @@ elif (goal==("bajar")):
     print("Calorias necesarias para bajar")
     IMC=(Datos[0]/(Datos[1]**2))
     print ("Tu IMC es:",IMC,"%")
-    
-     if (Datos[2]>17):
+    if (Datos[2]>17):
         if (paquete=="Muy Activo"):
             print (calorias(Datos[0],45)-1700)
            
@@ -134,6 +134,11 @@ elif (goal==("bajar")):
     
 else:
     print ("Dato no valido")
+
+
+
+
+    
 
 
 
