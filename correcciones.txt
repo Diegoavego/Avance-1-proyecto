@@ -1,0 +1,80 @@
+Sub-Competencia: componente: usa de manera eficaz los operadores en un programa
+
+Error original: Utilizaba if sobre if innecesario y ahora utilizo "and"
+
+Cambio realizado: if (goal==("subir")) and (datos[2]>17):
+    IMC=(datos[0]/(datos[1]**2))
+    ("Tu IMC es:",IMC,"%")
+    
+    if (paquete=="Muy Activo"):
+            (calorias(datos[0],45)+1700)
+           
+    elif (paquete=="Activo"):
+            (calorias(datos[0],45)+1200)
+    
+    elif (paquete=="Moderado"):
+            (calorias(datos[0],45)+900)
+            
+    elif (paquete=="Pasivo"):
+            (calorias(datos[0],45)+500)
+            
+elif (datos[2]<18):
+            if (paquete=="Muy Activo"):
+                (calorias(datos[0],40)+1100)
+            elif (paquete=="Activo"):
+                (calorias(datos[0],40)+900)
+                
+            elif (paquete=="Moderado"):
+                (calorias(datos[0],40)+700)
+               
+            elif (paquete=="Pasivo"):
+                (calorias(datos[0],40)+500)
+
+
+Líneas de código donde se ve la corrección: linea 46, linea 75, linea 105
+---------------------------------------------------------------------------------------
+Sub-Competencia: componente: Aplica estructuras ciclicas para resolver un problema de manera eficiente 
+
+Error original:Tenía demasiados break en un ciclo while y aunque funcionaba era un error de estilo, en cada if llamaba a break  
+
+Cambio realizado:
+while True:
+    act=int(input("""¿Que tan activo eres durante el día?
+    1:Muy Poco
+    2:Poco
+    3:Medianamente activo
+    4:Activo
+    5:Muy Activo"""))
+    
+    if 1<act<5:
+        if act==1:
+            paquete=("Pasivo")
+        
+        elif act==2:
+            paquete=("Pasivo")
+        
+        elif act==3:
+            paquete=("Moderado")
+        
+        elif act==4:
+            paquete=("Activo")
+        
+        elif act==5:
+            paquete=("Muy Activo")
+        break
+        
+    else:
+        print ("Debes seleccionar una opcion (1, 2, 3, 4 o 5)")
+
+Líneas de código donde se ve la corrección: 9 a 35
+
+
+
+--------------------------------------------------------------------
+Sub-Competencia: Usa herramientas de control de versiones, avance (1)
+
+Error original:No había hecho el correcto uso de github porque creaba un repositorio nuevo en lugar de editar el mismo pero desde el avance 3 ya lo hago bien
+
+Cambio realizado:archivos de github
+
+Líneas de código donde se ve la corrección: github
