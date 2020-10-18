@@ -112,28 +112,28 @@ elif (goal==("bajar")) and (Datos[2]>17):
     print("Calorias necesarias para bajar:")
     
     if (paquete=="Muy Activo"):
-            print (calorias(Datos[0],45)-1700)
+            print (calorias(Datos[0],45)-1000)
            
     elif (paquete=="Activo"):
             print (calorias(Datos[0],45)-1200)
             
     elif (paquete=="Moderado"):
-            print(calorias(Datos[0],45)+900)
+            print(calorias(Datos[0],45)-1500)
             
     elif (paquete=="Pasivo"):
-            print(calorias(Datos[0],45)+500)
+            print(calorias(Datos[0],45)-1100)
             
 elif (Datos[2]<18):
     if (paquete=="Muy Activo"):
-                print(calorias(Datos[0],40)+1100)
+                print(calorias(Datos[0],40)-700)
     elif (paquete=="Activo"):
-                print(calorias(Datos[0],40)+900)
+                print(calorias(Datos[0],40)-850)
                 
     elif (paquete=="Moderado"):
-                print(calorias(Datos[0],40)+700)
+                print(calorias(Datos[0],40)-900)
                
     elif (paquete=="Pasivo"):
-                print(calorias(Datos[0],40)+500)
+                print(calorias(Datos[0],40)-950)
                 
     
 else:
