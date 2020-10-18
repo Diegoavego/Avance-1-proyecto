@@ -121,7 +121,7 @@ elif (goal==("bajar")) and (Datos[2]>17):
             print(calorias(Datos[0],45)-1500)
             
     elif (paquete=="Pasivo"):
-            print(calorias(Datos[0],45)-1100)
+            print(calorias(Datos[0],45)-2000)
             
 elif (Datos[2]<18):
     if (paquete=="Muy Activo"):
