@@ -14,7 +14,7 @@ while True:
     4:Activo
     5:Muy Activo"""))
     
-    if 1<act<5:
+    if 1<=act<=5:
         if act==1:
             paquete=("Pasivo")
         
