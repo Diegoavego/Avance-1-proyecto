@@ -13,7 +13,7 @@ def usuario(nombre="",apellido=""):
 
 usuario(n,p)
 
-Datos=[float(input("Indica tu peso: ")),
+datos=[float(input("Indica tu peso: ")),
        (float(input("Indica tu altura en metros: "))),
        (int(input("Indica tu edad: ")))]
 
@@ -55,105 +55,105 @@ goal=str(input("Usar minusculas porfavor: "))
 def calorias(a,b):
     return (a*b)
 
-if (goal==("subir")) and (Datos[2]>17):
-    IMC=(Datos[0]/(Datos[1]**2))
+if (goal==("subir")) and (datos[2]>17):
+    IMC=(datos[0]/(datos[1]**2))
     print ("Tu IMC es:","{:.2f}".format(IMC),"%")
     print ("Calorias necesarias para subir:")
     
     
     if (paquete=="Muy Activo"):
-            print (calorias(Datos[0],45)+1200)
+            print (calorias(datos[0],45)+1200)
            
     elif (paquete=="Activo"):
-            print (calorias(Datos[0],45)+1000)
+            print (calorias(datos[0],45)+1000)
             
     elif (paquete=="Moderado"):
-            print(calorias(Datos[0],45)+800)
+            print(calorias(datos[0],45)+800)
             
     elif (paquete=="Pasivo"):
-            print(calorias(Datos[0],45)+500)
+            print(calorias(datos[0],45)+500)
             
-elif (Datos[2]<18):
-    IMC=(Datos[0]/(Datos[1]**2))
+elif (datos[2]<18):
+    IMC=(datos[0]/(datos[1]**2))
     print ("Tu IMC es:","{:.2f}".format(IMC),"%")
     print ("Calorias necesarias para subir:")
     if (paquete=="Muy Activo"):
-                print(calorias(Datos[0],40)+1100)
+                print(calorias(datos[0],40)+1100)
     elif (paquete=="Activo"):
-                print(calorias(Datos[0],40)+900)
+                print(calorias(datos[0],40)+900)
                 
     elif (paquete=="Moderado"):
-                print(calorias(Datos[0],40)+700)
+                print(calorias(datos[0],40)+700)
                
     elif (paquete=="Pasivo"):
-                print(calorias(Datos[0],40)+500)
+                print(calorias(datos[0],40)+500)
                 
      
-elif (goal==("mantener")) and (Datos[2]>17):
-    IMC=(Datos[0]/(Datos[1]**2))
+elif (goal==("mantener")) and (datos[2]>17):
+    IMC=(datos[0]/(datos[1]**2))
     print ("Tu IMC es:","{:.2f}".format(IMC),"%")
     print ("Calorias necesarias para mantener:")
     
     if (paquete=="Muy Activo"):
-            print (calorias(Datos[0],45)+200)
+            print (calorias(datos[0],45)+200)
            
     elif (paquete=="Activo"):
-            print (calorias(Datos[0],45)+150)
+            print (calorias(datos[0],45)+150)
             
     elif (paquete=="Moderado"):
-            print(calorias(Datos[0],45))
+            print(calorias(datos[0],45))
             
     elif (paquete=="Pasivo"):
-            print(calorias(Datos[0],45))
+            print(calorias(datos[0],45))
             
-elif (Datos[2]<18):
-    IMC=(Datos[0]/(Datos[1]**2))
+elif (datos[2]<18):
+    IMC=(datos[0]/(datos[1]**2))
     print ("Tu IMC es:","{:.2f}".format(IMC),"%")
     print ("Calorias necesarias para subir:")
     if (paquete=="Muy Activo"):
-                print(calorias(Datos[0],40)+150)
+                print(calorias(datos[0],40)+150)
     elif (paquete=="Activo"):
-                print(calorias(Datos[0],40)+100)
+                print(calorias(datos[0],40)+100)
                 
     elif (paquete=="Moderado"):
-                print(calorias(Datos[0],40))
+                print(calorias(datos[0],40))
                
     elif (paquete=="Pasivo"):
-                print(calorias(Datos[0],40))
+                print(calorias(datos[0],40))
     
     
     
-elif (goal==("bajar")) and (Datos[2]>17):
-    IMC=(Datos[0]/(Datos[1]**2))
+elif (goal==("bajar")) and (datos[2]>17):
+    IMC=(datos[0]/(datos[1]**2))
     print ("Tu IMC es:","{:.2f}".format(IMC),"%")
     print("Calorias necesarias para bajar:")
     
     if (paquete=="Muy Activo"):
-            print (calorias(Datos[0],45)-900)
+            print (calorias(datos[0],45)-900)
            
     elif (paquete=="Activo"):
-            print (calorias(Datos[0],45)-1000)
+            print (calorias(datos[0],45)-1000)
             
     elif (paquete=="Moderado"):
-            print(calorias(Datos[0],45)-1100)
+            print(calorias(datos[0],45)-1100)
             
     elif (paquete=="Pasivo"):
-            print(calorias(Datos[0],45)-1300)
+            print(calorias(datos[0],45)-1300)
             
-elif (Datos[2]<18):
-    IMC=(Datos[0]/(Datos[1]**2))
+elif (datos[2]<18):
+    IMC=(datos[0]/(datos[1]**2))
     print ("Tu IMC es:","{:.2f}".format(IMC),"%")
     print ("Calorias necesarias para subir:")
     if (paquete=="Muy Activo"):
-                print(calorias(Datos[0],40)-150)
+                print(calorias(datos[0],40)-150)
     elif (paquete=="Activo"):
-                print(calorias(Datos[0],40)-250)
+                print(calorias(datos[0],40)-250)
                 
     elif (paquete=="Moderado"):
-                print(calorias(Datos[0],40)-350)
+                print(calorias(datos[0],40)-350)
                
     elif (paquete=="Pasivo"):
-                print(calorias(Datos[0],40)-400)
+                print(calorias(datos[0],40)-400)
                 
     
 else:
