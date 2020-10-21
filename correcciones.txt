@@ -1,3 +1,116 @@
+
+
+Sub-Competencia: Explica como funciona la biblioteca extra
+
+Error original:no explicaba la biblioteca
+
+Cambio realizado:#Usamos la biblioteca de math para usar operaciones matematicas como cuadrados
+"""Usamos la biblioteca de tabulate para que la lista se imprima en formato de tabla y sea
+mas visual para el usuario"""
+
+Líneas de código donde se ve la corrección: Linea 5 Linea 285
+-----------------------------------------------------------------------------------
+
+Sub-Competencia: Usa una biblioteca de python extra que investiga por su cuenta(avance 1)
+
+Error original:No usaba biblioteca extra
+
+Cambio realizado: from tabulate import tabulate 
+
+Líneas de código donde se ve la corrección: linea 9
+---------------------------------------------------------------------------------------
+
+Sub-Competencia: Aplica funciones de manera adecuada para segmentar el codigo y mantener reusabilidad y modularidad(avance 2)
+
+Error original:No apicaba funciones 
+
+Cambio realizado:"====================FUNCIONES========================================="
+"""(Uso de funciones Y Parametros)
+Definimos el nombre y apellido de las variables del usuario
+y se imprimen en formato de nombre y apellido. Regresa estos datos
+para llamar a la funcion y que los datos se queden guardados"""
+
+def usuario(nombre="",apellido=""):
+    print("Hola",nombre,apellido)
+    print ("A continuación tomaremos tus datos...")
+    return usuario
+
+"""(Uso de funciones, condicionales y ciclos)
+Definimos cual es la actividad del usuario durante el día y dependiendo de su respuesta
+determinamos las variables más adelante. Recibe un entero del usuario y no permite que se
+introduzca un numero erroneo que no este dentro de las opciones, si el usuario lo hace
+regresa a la pregunta. Devuelve el numero que introduce el usuario"""
+
+def act ():
+    while True:
+        act=int(input("""¿Que tan activo eres durante el día?
+                      1:Muy Poco
+                      2:Poco
+                      3:Medianamente activo
+                      4:Activo
+                      5:Muy Activo"""))
+    
+        if 1<=act<=5:
+            break
+        
+        else:
+            print ("Debes seleccionar una opcion (1, 2, 3, 4 o 5)")
+    return act
+        
+
+"""(Uso de funciones, condicionales y operadores)
+Definimos a que paquete pertence el usuario segun que tan activo es durante el día para usarlo
+en el programa central, si es pasivo, moderado o activo. Regresa la variable paquete como string"""
+
+def paquete_funcion():
+    if (actividad==1) or (actividad==2):
+        paquete=("Pasivo")
+        
+    elif actividad==3:
+        paquete=("Moderado")
+        
+    elif actividad==4:
+        paquete=("Activo")
+        
+    elif actividad==5:
+        paquete=("Muy Activo")
+    return paquete
+    
+"""(Uso de funciones, operaciones y parametros)
+Definimos la operación para el programa central para sacar las calorias.
+Multiplica los parametros y devuelve el producto"""
+def calorias(a,b):
+    return (a*b)
+
+
+"""(Funciones)
+Se define la operacion para sacar el IMC del usuario. Se toma
+de la lista de los datos del usuario su peso y este se divide entre
+su altura al cuadrado. Se imprime el resultado de IMC limitando a 2 decimales
+y se devuelve el valor"""
+
+def IMC_usuario ():
+    IMC=(datos[0]/(datos[1]**2))
+    print ("Tu IMC es:","{:.2f}".format(IMC),"%")
+    
+    return IMC
+
+
+"""(Funciones)
+Definimos el objetivo del usuario, si desea bajar, mantener o subir de peso.
+Recibe un string del usuario y lo guarda en la variable. Devuelve la variable, goal"""
+
+def goal_funcion ():
+    print ("Deseas subir, bajar, o mantener peso?")
+    goal=str(input("Usar minusculas porfavor: "))
+    return goal
+
+
+Líneas de código donde se ve la corrección:Linea 27 a 112
+-----------------------------------------------------------------------------------------------
+
+
+
 Sub-Competencia: componente: usa de manera eficaz los operadores en un programa
 
 Error original: Utilizaba if sobre if innecesario y ahora utilizo "and"
@@ -35,7 +148,8 @@ Líneas de código donde se ve la corrección: linea 46, linea 75, linea 105
 ---------------------------------------------------------------------------------------
 Sub-Competencia: componente: Aplica estructuras ciclicas para resolver un problema de manera eficiente 
 
-Error original:Tenía demasiados break en un ciclo while y aunque funcionaba era un error de estilo, en cada if llamaba a break  
+Error original:No usaba de manera correcta "break". 
+Tenía demasiados break en un ciclo while y aunque funcionaba era un error de estilo, en cada if llamaba a break  
 
 Cambio realizado:
 while True:
@@ -76,5 +190,11 @@ Sub-Competencia: Usa herramientas de control de versiones, avance (1)
 Error original:No había hecho el correcto uso de github porque creaba un repositorio nuevo en lugar de editar el mismo pero desde el avance 3 ya lo hago bien
 
 Cambio realizado:archivos de github
+-----------------------------------------------------------------
+Sub-Competencia:Componente: Plantea una situación problema que le permite aplicar y demostrar sus conocimientos de programación
 
-Líneas de código donde se ve la corrección: github
+Error original:No explique bien mi proyecto en readme de github
+
+Cambio realizado:
+
+Líneas de código donde se ve la corrección:github readme 
