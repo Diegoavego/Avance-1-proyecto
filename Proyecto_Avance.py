@@ -145,7 +145,7 @@ imc=IMC_usuario()
 
 
 "=======================Programa=Central====================================="
-
+"""(Condicionales anidadas y uso de los datos de la lista)"""
 #Rescata todos los datos guardados anteriormente y comienza a calcular las calorias
 
 
